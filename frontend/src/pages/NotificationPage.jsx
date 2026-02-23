@@ -50,7 +50,7 @@ const NotificationPage = () => {
                       <div className='flex items-center justify-between'>
                         <div className='flex items-center gap-3'>
                           <div className='avatar w-14 h-14 rounded-full bg-base-300'>
-                            <img src={request.sender?.profilePic} alt={request.sender.fullName} />
+                            <img src={request.sender?.profilePic || '/default-profile.png'} alt={request.sender.fullName} />
                           </div>
                           <div>
                             <h3 className='font-semibold'>{request.sender.fullName}</h3>
@@ -97,7 +97,7 @@ const NotificationPage = () => {
                   <div className='flex items-start gap-3'>
                     <div className='avatar mt-1 size-10 rounded-full'>
                       <img 
-                      src={notification.recepient.profilePic} 
+                      src={notification.recepient?.profilePic || '/default-profile.png'} 
                       alt={notification.recepient.profilePic} />
                     </div>
                     <div className='flex-1'>
