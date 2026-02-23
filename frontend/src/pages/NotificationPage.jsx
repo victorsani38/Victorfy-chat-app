@@ -50,16 +50,16 @@ const NotificationPage = () => {
                       <div className='flex items-center justify-between'>
                         <div className='flex items-center gap-3'>
                           <div className='avatar w-14 h-14 rounded-full bg-base-300'>
-                            <img src={request.sender.profilePic} alt={request.sender.fullName} />
+                            <img src={request.sender?.profilePic} alt={request.sender.fullName} />
                           </div>
                           <div>
                             <h3 className='font-semibold'>{request.sender.fullName}</h3>
                             <div className='flex flex-wrap gap-1.5 mt-1'>
                               <span className='badge badge-secondary badge-sm'>
-                                Native: {request.sender.nativeLanguage}
+                                Native: {request.sender?.nativeLanguage}
                               </span>
                               <span className='badge badge-outline badge-sm'>
-                                Learning: {request.sender.learningLanguage}
+                                Learning: {request.sender?.learningLanguage}
                               </span>
                             </div>
                           </div>
